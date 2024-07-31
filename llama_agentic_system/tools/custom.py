@@ -11,6 +11,7 @@ from typing import Dict, List
 
 from llama_models.llama3_1.api.datatypes import *  # noqa: F403
 from llama_agentic_system.api import *  # noqa: F403
+import pandas as pd
 
 from llama_agentic_system.tools.builtin import interpret_content_as_attachment
 

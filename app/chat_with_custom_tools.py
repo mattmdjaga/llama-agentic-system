@@ -7,6 +7,7 @@
 import mesop as me
 
 from examples.custom_tools.ticker_data import TickerDataTool
+from llama_agentic_system.tools.genes import GeneDiseaseAssociationTool, GeneGoTermsTool, DownstreamAnalysisTool
 from utils.chat import chat, State
 from utils.client import ClientManager
 from utils.common import DISABLE_SAFETY, INFERENCE_HOST, INFERENCE_PORT, on_attach
@@ -17,7 +18,7 @@ client_manager = ClientManager()
 client_manager.init_client(
     inference_port=INFERENCE_PORT,
     host=INFERENCE_HOST,
-    custom_tools=[TickerDataTool()],
+    custom_tools=[TickerDataTool(), GeneDiseaseAssociationTool(), GeneGoTermsTool(),DownstreamAnalysisTool()],
     disable_safety=DISABLE_SAFETY,
 )
 
